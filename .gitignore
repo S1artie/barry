@@ -1,0 +1,5 @@
+# macOS Finder metadata
+.DS_Store
+
+# Keep the deployable Flutter web bundle; exclude its local build marker.
+/workbench/.last_build_id
