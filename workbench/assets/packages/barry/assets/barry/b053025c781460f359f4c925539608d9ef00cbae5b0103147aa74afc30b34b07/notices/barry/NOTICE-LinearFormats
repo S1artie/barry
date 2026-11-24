@@ -1,0 +1,19 @@
+Barry Code39, Code93 and Interleaved 2 of 5 pattern attribution
+
+The immutable standard pattern constants in src/linear/code39.rs,
+src/linear/code93.rs and src/linear/itf.rs are transcribed from ZXing 3.5.3,
+licensed under the Apache License, Version 2.0:
+
+Code39Reader.java: Copyright 2008 ZXing authors.
+https://github.com/zxing/zxing/blob/zxing-3.5.3/core/src/main/java/com/google/zxing/oned/Code39Reader.java
+
+Code93Reader.java: Copyright 2010 ZXing authors.
+https://github.com/zxing/zxing/blob/zxing-3.5.3/core/src/main/java/com/google/zxing/oned/Code93Reader.java
+
+ITFReader.java: Copyright 2009 ZXing authors.
+https://github.com/zxing/zxing/blob/zxing-3.5.3/core/src/main/java/com/google/zxing/oned/ITFReader.java
+
+Barry packs these constants as integers. Recognition, fitting, checksum/control
+policy and scheduling are Barry implementations; no ZXing decoder is a
+runtime dependency. The complete shared Apache License, Version 2.0 is included
+as LICENSE-Code128.

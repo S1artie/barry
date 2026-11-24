@@ -1,0 +1,7 @@
+Barry logo — LicenseRef-Barry-App-Brand
+Copyright (c) 2026 Barry contributors
+
+Permission is granted to include and redistribute assets/barry-logo.png as
+brand artwork in the public Barry Flutter application sources and in builds
+of those applications. The artwork is not covered by the MIT grant for the
+code. No other trademark rights are granted by this notice.

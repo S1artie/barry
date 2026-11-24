@@ -1,0 +1,59 @@
+PDF417, GS1 DataBar and Composite immutable symbol facts
+
+The PDF417 cluster codeword patterns, MicroPDF417 layout/initial RAP facts,
+and side/centre RAP patterns in src/pdf417/tables.rs are transcribed from
+backend/pdf417_tabs.h in Zint commit
+4896136bdbebb1a0908a5cc419513efa5bf4bf70 (Zint 2.15.0):
+https://raw.githubusercontent.com/zint/zint/4896136bdbebb1a0908a5cc419513efa5bf4bf70/backend/pdf417_tabs.h
+
+Only immutable data constants are transferred. Barry's localization, correction
+and compaction algorithms are implemented by Barry; no Zint executable or
+encoder algorithm is a runtime dependency. Barry restores the omitted trailing
+zero module in the writer's sixteen-bit codeword representation.
+
+DataBar width groups, finders, check patterns and Expanded finder sequences
+in src/databar/ use ISO/IEC 24724 facts cross-checked against backend/rss.h
+at the same Zint commit. CC-A and CC-B layout/RAP witnesses use backend/composite.h
+and backend/pdf417_tabs.h from that commit. General-purpose encodation
+character assignments are cross-checked against backend/general_field.c.
+No restricted BSI implementation routines are included.
+
+ISO/IEC 24723 symbol-separator bit assignments are cross-checked against the
+official GS1 Barcode Engine (GS1 AISBL, Apache-2.0), src/c-lib/cc.c at commit
+289c8995f001109d0d62e76454f5b1f361dcffae:
+https://github.com/gs1/gs1-barcode-engine/blob/289c8995f001109d0d62e76454f5b1f361dcffae/src/c-lib/cc.c
+Only wire facts are used; no GS1 engine code or runtime is included.
+
+SPDX-License-Identifier: BSD-3-Clause
+
+libzint - the open source barcode library
+Copyright (C) 2008-2024 Robin Stuart <rstuart114@gmail.com>
+Copyright (C) 2007-2024 Robin Stuart <rstuart114@gmail.com> (rss.h)
+Copyright (C) 2008-2025 Robin Stuart <rstuart114@gmail.com> (composite.h)
+Copyright (C) 2019-2024 Robin Stuart <rstuart114@gmail.com> (general_field.c)
+Portions Copyright (C) 2004 Grandzebu
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the name of the project nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.

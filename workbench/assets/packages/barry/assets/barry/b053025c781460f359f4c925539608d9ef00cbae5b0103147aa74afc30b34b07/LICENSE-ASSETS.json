@@ -1,0 +1,1793 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "docs/flutter-apps.md": {"license": "MIT", "kind": "documentation", "notice": ["LICENSE"], "provenance": "Barry-maintained Flutter app consumer build and deployment guide."},
+    "tools/flutter_notice_data/camerax-libyuv-LICENSE.txt": {"license": "BSD-3-Clause", "kind": "license", "notice": ["tools/flutter_notice_data/camerax-libyuv-LICENSE.txt", "THIRD-PARTY-NOTICES.md"], "provenance": "Unmodified libyuv publisher copyright and grant tied to the CameraX Core 1.6.2 artifact and POM facts in camerax-libyuv-source.json.", "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"},
+    "tools/flutter_notice_data/camerax-libyuv-source.json": {"license": "MIT", "kind": "metadata", "notice": ["LICENSE", "tools/flutter_notice_data/camerax-libyuv-LICENSE.txt"], "provenance": "Barry-maintained scope, version and custody of the CameraX libyuv notice supplement."},
+    "tools/flutter_notice_data/compiler-builtins-LICENSE.txt": {"license": "MIT AND Apache-2.0 WITH LLVM-exception AND (MIT OR Apache-2.0)", "kind": "license", "notice": ["tools/flutter_notice_data/compiler-builtins-LICENSE.txt", "THIRD-PARTY-NOTICES.md"], "provenance": "Complete upstream compiler-builtins 0.1.160 grant from the pinned stable Rust source package.", "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"},
+    "tools/flutter_notice_data/native-projection.json": {"license": "MIT", "kind": "metadata", "notice": ["LICENSE"], "provenance": "Barry-maintained Flutter native notice selection and audited exclusion rules derived from the selected Flutter producer proof."},
+    "tools/flutter_notice_data/rust-libm-LICENSE.txt": {"license": "MIT", "kind": "license", "notice": ["tools/flutter_notice_data/rust-libm-LICENSE.txt", "THIRD-PARTY-NOTICES.md"], "provenance": "Complete upstream libm 0.2.16 grant from the pinned stable Rust source package.", "sha256": "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"},
+    "tools/flutter_notice_data/rust-runtime-source.json": {"license": "MIT", "kind": "metadata", "notice": ["LICENSE", "tools/flutter_notice_data/compiler-builtins-LICENSE.txt", "tools/flutter_notice_data/rust-libm-LICENSE.txt"], "provenance": "Barry-maintained compiler, source package and crate custody for the Flutter Rust runtime notice supplements."},
+    "apps/barry-flutter-common/LICENSE-Flutter": {"license": "BSD-3-Clause", "kind": "license", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter SDK 3.50.0 LICENSE, verbatim."},
+    "apps/barry-flutter-common/LICENSE-Gradle": {"license": "Apache-2.0", "kind": "license", "notice": ["apps/barry-flutter-common/LICENSE-Gradle"], "provenance": "Gradle v2.10 subprojects/distributions/src/toplevel legal text, verbatim; retained for the Flutter-distributed wrapper."},
+    "apps/barry-flutter-common/NOTICE-BarryLogo": {"license": "LicenseRef-Barry-App-Brand", "kind": "notice", "notice": ["apps/barry-flutter-common/NOTICE-BarryLogo"], "provenance": "Barry artwork permission for the public Flutter apps."},
+    "apps/barry-flutter-common/NOTICE-Gradle": {"license": "Apache-2.0", "kind": "notice", "notice": ["apps/barry-flutter-common/NOTICE-Gradle"], "provenance": "Gradle v2.10 subprojects/distributions/src/toplevel legal text, verbatim; retained for the Flutter-distributed wrapper."},
+    "apps/barry-flutter-common/assets/barry-logo.png": {"license": "LicenseRef-Barry-App-Brand", "kind": "artwork", "notice": ["apps/barry-flutter-common/NOTICE-BarryLogo"], "provenance": "Byte-identical copy of the Barry Android full mark (barry_logo.png), rendered from design/barry-logo-full.svg by apps/tools/generate_branding.py.", "sha256": "f6e591d61d8626efc0eaa88ae7c46dc36d9ea875e234374d9833babac60a4f60"},
+    "apps/barry-flutter-common/pubspec.lock": {"license": "MIT", "kind": "lockfile", "notice": ["LICENSE"], "provenance": "Barry app dependency resolution and checksums; third-party packages keep their original licenses."},
+    "apps/barry-flutter-gui/.gitignore": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/.metadata": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/README.md": {"license": "MIT", "kind": "documentation", "notice": ["LICENSE"], "provenance": "Barry-maintained guide to running and verifying the Flutter sample."},
+    "apps/barry-flutter-gui/analysis_options.yaml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/assets/NOTICE.md": {"license": "MIT", "kind": "documentation", "notice": ["LICENSE"], "provenance": "Barry-maintained guide to running and verifying the Flutter sample."},
+    "apps/barry-flutter-gui/linux/.gitignore": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/linux/CMakeLists.txt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/linux/flutter/CMakeLists.txt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/linux/runner/CMakeLists.txt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/linux/runner/main.cc": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/linux/runner/my_application.cc": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template; Barry sets the default content size to 1160 × 780."},
+    "apps/barry-flutter-gui/linux/runner/my_application.h": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/.gitignore": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Flutter/Flutter-Debug.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Flutter/Flutter-Release.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner.xcodeproj/project.pbxproj": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner.xcworkspace/contents.xcworkspacedata": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/AppDelegate.swift": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "6232e5815af17e25e0268b2fec7aea9e068cc92ec709e9605c2b31df4ff2a313"},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "15591f03f31313af6fd644ed0512106cc04365130b8b73244f1cfa6dddfb4400"},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "cc6928b5adfc00dbf526192e2705dd9af641cdf20ab4c6c7ca7cd4936dca59f0"},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "416efd77cde932d42ef34168da24dd428a495b1f4f34bbbd125a18d2add186a2"},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "ae8c4458e41f1e28b1e851ed87d3268d4a0351ceea427fa2a84cc94ddfb6d4c5"},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "0a91c6c1bf242e54ee179e34629e9ef3e8a6d286c0fce01e302280a8be9277e6"},
+    "apps/barry-flutter-gui/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "6ad229623498e5f1277800db3ab7cb11faf85eb2569e1213f7d8e55003c07b42"},
+    "apps/barry-flutter-gui/macos/Runner/Base.lproj/MainMenu.xib": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template; Barry sets the default content size to 1160 × 780."},
+    "apps/barry-flutter-gui/macos/Runner/Configs/AppInfo.xcconfig": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/macos/Runner/Configs/Debug.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/Configs/Release.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/Configs/Warnings.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/DebugProfile.entitlements": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/macos/Runner/Info.plist": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/macos/Runner/MainFlutterWindow.swift": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/macos/Runner/Release.entitlements": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/macos/RunnerTests/RunnerTests.swift": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/pubspec.lock": {"license": "MIT", "kind": "lockfile", "notice": ["LICENSE"], "provenance": "Barry app dependency resolution and checksums; third-party packages keep their original licenses."},
+    "apps/barry-flutter-gui/pubspec.yaml": {"license": "MIT AND BSD-3-Clause", "kind": "metadata", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app manifest adapted by Barry to select public dependencies."},
+    "apps/barry-flutter-gui/web/favicon.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "7ab2525f4b86b65d3e4c70358a17e5a1aaf6f437f99cbcc046dad73d59bb9015"},
+    "apps/barry-flutter-gui/web/icons/Icon-192.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "3dce99077602f70421c1c6b2a240bc9b83d64d86681d45f2154143310c980be3"},
+    "apps/barry-flutter-gui/web/icons/Icon-512.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "baccb205ae45f0b421be1657259b4943ac40c95094ab877f3bcbe12cd544dcbe"},
+    "apps/barry-flutter-gui/web/icons/Icon-maskable-192.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "d2c842e22a9f4ec9d996b23373a905c88d9a203b220c5c151885ad621f974b5c"},
+    "apps/barry-flutter-gui/web/icons/Icon-maskable-512.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "6aee06cdcab6b2aef74b1734c4778f4421d2da100b0ff9e52b21b55240202929"},
+    "apps/barry-flutter-gui/web/index.html": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/web/manifest.json": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-gui/windows/.gitignore": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/CMakeLists.txt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/flutter/CMakeLists.txt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/CMakeLists.txt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/Runner.rc": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/flutter_window.cpp": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/flutter_window.h": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/main.cpp": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template; Barry sets the default content size to 1160 × 780."},
+    "apps/barry-flutter-gui/windows/runner/resource.h": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/resources/app_icon.ico": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "c098d3fc85cacff98b8e69811b48e9f0d852fcee278132d794411d978869cbf8"},
+    "apps/barry-flutter-gui/windows/runner/runner.exe.manifest": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/utils.cpp": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/utils.h": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/win32_window.cpp": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-gui/windows/runner/win32_window.h": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/.gitignore": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/.metadata": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/README.md": {"license": "MIT", "kind": "documentation", "notice": ["LICENSE"], "provenance": "Barry-maintained guide to running and verifying the Flutter sample."},
+    "apps/barry-flutter-mobile/analysis_options.yaml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/.gitignore": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/build.gradle.kts": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/android/app/src/debug/AndroidManifest.xml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/src/main/AndroidManifest.xml": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/android/app/src/main/kotlin/de/firehead/barry/flutter/mobile/MainActivity.kt": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/src/main/res/drawable-v21/launch_background.xml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/src/main/res/drawable/launch_background.xml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/src/main/res/mipmap-hdpi/ic_launcher.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "6a7c8f0d703e3682108f9662f813302236240d3f8f638bb391e32bfb96055fef"},
+    "apps/barry-flutter-mobile/android/app/src/main/res/mipmap-mdpi/ic_launcher.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "c7c0c0189145e4e32a401c61c9bdc615754b0264e7afae24e834bb81049eaf81"},
+    "apps/barry-flutter-mobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "e14aa40904929bf313fded22cf7e7ffcbf1d1aac4263b5ef1be8bfce650397aa"},
+    "apps/barry-flutter-mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "4d470bf22d5c17d84edc5f82516d1ba8a1c09559cd761cefb792f86d9f52b540"},
+    "apps/barry-flutter-mobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "3c34e1f298d0c9ea3455d46db6b7759c8211a49e9ec6e44b635fc5c87dfb4180"},
+    "apps/barry-flutter-mobile/android/app/src/main/res/values-night/styles.xml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/src/main/res/values/styles.xml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/app/src/profile/AndroidManifest.xml": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/build.gradle.kts": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/gradle.properties": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/android/gradle/wrapper/gradle-wrapper.jar": {"license": "Apache-2.0", "kind": "gradle-wrapper", "notice": ["apps/barry-flutter-common/LICENSE-Gradle", "apps/barry-flutter-common/NOTICE-Gradle"], "provenance": "Verbatim Gradle 2.10 wrapper supplied by the Flutter 3.50.0 SDK gradle_wrapper artifact; the invoked distribution is configured separately.", "sha256": "16caeaf66d57a0d1d2087fef6a97efa62de8da69afa5b908f40db35afc4342da"},
+    "apps/barry-flutter-mobile/android/gradle/wrapper/gradle-wrapper.properties": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/android/gradlew": {"license": "Apache-2.0", "kind": "gradle-wrapper", "notice": ["apps/barry-flutter-common/LICENSE-Gradle", "apps/barry-flutter-common/NOTICE-Gradle"], "provenance": "Verbatim Gradle 2.10 wrapper supplied by the Flutter 3.50.0 SDK gradle_wrapper artifact; the invoked distribution is configured separately.", "sha256": "ec56c02543666d92d9ac5ae7fcc48f88ce4de0deb8b7f9b39928ca46f68c1b2b"},
+    "apps/barry-flutter-mobile/android/gradlew.bat": {"license": "Apache-2.0", "kind": "gradle-wrapper", "notice": ["apps/barry-flutter-common/LICENSE-Gradle", "apps/barry-flutter-common/NOTICE-Gradle"], "provenance": "Verbatim Gradle 2.10 wrapper supplied by the Flutter 3.50.0 SDK gradle_wrapper artifact; the invoked distribution is configured separately.", "sha256": "c13c6e91b9a517783976de213d46398c661ea9e17651376d7301e839eaedcc62"},
+    "apps/barry-flutter-mobile/android/settings.gradle.kts": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/assets/NOTICE.md": {"license": "MIT", "kind": "documentation", "notice": ["LICENSE"], "provenance": "Barry-maintained guide to running and verifying the Flutter sample."},
+    "apps/barry-flutter-mobile/ios/.gitignore": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Flutter/AppFrameworkInfo.plist": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Flutter/Debug.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Flutter/Release.xcconfig": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcodeproj/project.pbxproj": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcworkspace/contents.xcworkspacedata": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/AppDelegate.swift": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "7770183009e914112de7d8ef1d235a6a30c5834424858e0d2f8253f6b8d31926"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "cab10a0d391ec5bc09ef50ce49e8ad401cee7ef03707ec0923a222c5c2b3d212"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "b9ad02cf6576a04d1b6806ac02a2431481b448dd0c2e505ce25842d1f7c4730b"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "c6e6d3b215ae744a9c391f4c4d44157eff5e739d6ad6c39f9bfa5df66dddd267"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "5dee24dc104ac76dc162e42ae0beb163d426bf365562ee28ba7b3ad368559a60"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "a9b21eb6f4271385655a8771f76e29eef8c1107d7879cbcfc567e6619d1f716a"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "e677d701ffe4af7bc2935098d6b3984cc9ab7ace573e6900955a5535b12410cf"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "b9ad02cf6576a04d1b6806ac02a2431481b448dd0c2e505ce25842d1f7c4730b"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "7c61c42fc7b657d9cf314d32a4ec458f0647c3aaf360be1b9377857266ec2499"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "19be171481dc71a0b2803ebcd01dd8b0c5fd5778dee34c0a3cabc948c225f24e"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "19be171481dc71a0b2803ebcd01dd8b0c5fd5778dee34c0a3cabc948c225f24e"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "4209a49e44a92ec40a327d3455eb1b1c153ee83d75de1c2be0a12ab18b2ff9de"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "836c918cb613249eba0483a6b02fa3df3c1c0a89a315ee4d3b88509b83c7ab73"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "41c7d42f6e61f8fe7f30b1ffa2256aecbc9682be06d18c4a3062043e1a2e547c"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "5d7e5bdf01b93802bc973345b3a78c038907147625035952a08a115a563b7f81"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "93ae7d494fad0fb30cbf3ae746a39c4bc7a0f8bbf87fbb587a3f3c01f3c5ce20"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "93ae7d494fad0fb30cbf3ae746a39c4bc7a0f8bbf87fbb587a3f3c01f3c5ce20"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template artwork, unmodified.", "sha256": "93ae7d494fad0fb30cbf3ae746a39c4bc7a0f8bbf87fbb587a3f3c01f3c5ce20"},
+    "apps/barry-flutter-mobile/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/Base.lproj/LaunchScreen.storyboard": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/Base.lproj/Main.storyboard": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/Info.plist": {"license": "MIT AND BSD-3-Clause", "kind": "flutter-template", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template adapted by Barry."},
+    "apps/barry-flutter-mobile/ios/Runner/Runner-Bridging-Header.h": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/Runner/SceneDelegate.swift": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/ios/RunnerTests/RunnerTests.swift": {"license": "BSD-3-Clause", "kind": "flutter-template", "notice": ["apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app template output, including generated project configuration."},
+    "apps/barry-flutter-mobile/pubspec.lock": {"license": "MIT", "kind": "lockfile", "notice": ["LICENSE"], "provenance": "Barry app dependency resolution and checksums; third-party packages keep their original licenses."},
+    "apps/barry-flutter-mobile/pubspec.yaml": {"license": "MIT AND BSD-3-Clause", "kind": "metadata", "notice": ["LICENSE", "apps/barry-flutter-common/LICENSE-Flutter"], "provenance": "Flutter 3.50.0 empty-app manifest adapted by Barry to select public dependencies."},
+    ".gitattributes": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry contributors' byte-preserving Git checkout attributes; ordinary Git storage without text normalization or LFS filters."
+    },
+    ".gitignore": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry public-tree development exclusions, not an export membership allowlist."
+    },
+    "Cargo.lock": {
+      "license": "MIT",
+      "kind": "lockfile",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained dependency resolution/integrity metadata; upstream package licenses remain independent and are not replaced by this metadata license."
+    },
+    "LICENSE": {
+      "license": "MIT",
+      "kind": "license",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Canonical MIT grant: Copyright (c) 2026 Barry contributors."
+    },
+    "LICENSE-ASSETS.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry exact-path license/provenance index; classifications are source-bound exceptions to inline headers, not a grant over dependencies or unknown upstream material."
+    },
+    "MANIFEST.in": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry setuptools source-inclusion manifest; includes standalone public build sources, not installed dependencies."
+    },
+    "README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored public build/integration guidance, including native Linux ARM64 and explicit Android host compatibility; external references retain their own terms."
+    },
+    "THIRD-PARTY-NOTICES.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "apps/barry-python-gui/LICENSE": {
+      "license": "MIT",
+      "kind": "license",
+      "notice": [
+        "apps/barry-python-gui/LICENSE"
+      ],
+      "provenance": "App-local byte-identical copy of the canonical Barry MIT grant for independent application distributions.",
+      "sha256": "418a76ea4a63bcf0a558216454c571c5802ece9acb0520aaae6b6891c4c41518"
+    },
+    "apps/barry-python-gui/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored build/run documentation for the public Python GUI package; no duplicate application implementation."
+    },
+    "apps/barry-python-gui/pyproject.toml": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "apps/barry-python-gui/LICENSE"
+      ],
+      "provenance": "Barry-maintained independent Qt application packaging metadata; dependencies retain their independent licenses."
+    },
+    "cnn/models/pointpose.pt": {
+      "license": "MIT",
+      "kind": "model",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Selected Barry pointpose.pt checkpoint; owner expressly authorizes MIT release. Original bytes and mtime retained; no grant for private training corpora or third-party dependencies.",
+      "sha256": "cac63ae62532c4cf2e32fdf61e96c32183c59b8b7cfc9b35525811a892dec042"
+    },
+    "cnn/models/widecorners.pt": {
+      "license": "MIT",
+      "kind": "model",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Selected Barry widecorners.pt checkpoint; owner expressly authorizes MIT release. Original bytes and mtime retained; no grant for private training corpora or third-party dependencies.",
+      "sha256": "a966c211a81ad7d4914090759a17ff82ce985c7c2f61da56f7360d6081a7a353"
+    },
+    "docs/browser-library.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored four-host native browser provisioning and portable-recipe/local-receipt guidance; external references retain their own terms."
+    },
+    "docs/gui-distribution.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "docs/java-library.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "docs/java-samples.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "docs/licensing.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "docs/native-build.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored full-matrix native build and Linux ARM64 Android compatibility/source-license custody guidance; downloaded tools and local receipts are excluded."
+    },
+    "docs/python-desktop.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "docs/release-check.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored public release/export and three-producer CI guidance with authorized host inputs and portable cross-host consumer evidence."
+    },
+    "docs/source-guide.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "docs/testing.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "examples/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored independent single-image language example index; no private qualification data."
+    },
+    "examples/android/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "examples/android/camerax/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": ["LICENSE"],
+      "provenance": "Barry-authored independent CameraX analyzer example guide."
+    },
+    "examples/browser/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored runnable serial/threaded browser consumer instructions; no private inputs or external reader."
+    },
+    "examples/browser/production/package.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": ["LICENSE"],
+      "provenance": "Barry-authored private application manifest for the detached browser deployment example."
+    },
+    "examples/browser/production/tsconfig.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": ["LICENSE"],
+      "provenance": "Barry-authored TypeScript configuration for the browser deployment example."
+    },
+    "examples/c/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored standalone C image-example build and usage instructions."
+    },
+    "examples/common/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored sample-only image normalization/presentation and retained codec attribution guide."
+    },
+    "examples/common/stb_image.h": {
+      "license": "MIT OR Unlicense",
+      "kind": "third-party-source",
+      "sha256": "deb4f18c9ca21b751a1323019031c94c0bf5ca1d2929ef5913cc56f00aab6e91",
+      "notice": [
+        "examples/common/stb_image.h",
+        "THIRD-PARTY-NOTICES.md"
+      ],
+      "provenance": "Unmodified https://raw.githubusercontent.com/nothings/stb/9600522de53973336fa033a289858a4354cbb04c/stb_image.h from nothings/stb revision 9600522de53973336fa033a289858a4354cbb04c. Embedded upstream MIT and alternative public-domain/Unlicense grants are retained. Independent C/C++ image examples only; not linked into Barry libraries, GUI apps or protocol tools."
+    },
+    "examples/cpp/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored standalone C++ image-example build and usage instructions."
+    },
+    "examples/ios/BarryExample.xcodeproj/project.pbxproj": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored independent UIKit app build configuration; imports an explicit static XCFramework without embedding or rebuilding Barry."
+    },
+    "examples/ios/BarryExample.xcodeproj/xcshareddata/xcschemes/BarryExample.xcscheme": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored shared Xcode build/run scheme for the independent image-picker example."
+    },
+    "examples/ios/Info.plist": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored UIKit image-picker application identity and launch metadata; no camera permissions."
+    },
+    "examples/ios/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "examples/java/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored independent Java8 image-example provisioning/build/runtime guide."
+    },
+    "examples/python/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored installed native-ctypes Python image-example build and usage instructions."
+    },
+    "examples/rust/Cargo.lock": {
+      "license": "MIT",
+      "kind": "lockfile",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained standalone image-example dependency resolution/integrity metadata; dependency licenses remain independent and these codecs are outside the root product workspace."
+    },
+    "examples/rust/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored standalone Rust image-scanning example build/run documentation; codec acquisition is independent of product provisioning."
+    },
+    "src/java/api/0.2.0.txt": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": ["LICENSE"],
+      "provenance": "Versioned public/protected API contract derived from Barry's exported Java declarations; compared against compiled class descriptors at packaging."
+    },
+    "src/java/api/0.3.0.txt": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": ["LICENSE"],
+      "provenance": "Versioned public/protected API contract derived from Barry's exported Java declarations; compared against compiled class descriptors at packaging."
+    },
+    "src/java/src/test/resources/fixtures/code_128-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "5fff0fd7afa244ed28ba36818250317af0dc9f734ee82d6799c243aa1120279b"
+    },
+    "src/java/src/test/resources/fixtures/code_128-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "02b76fd4c36a3918289248d70fc2583f93764f95d33295c274e7b33664c79948"
+    },
+    "src/java/src/test/resources/fixtures/code_128-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "ca381e97b9b89f893c7fd421ce21f899ead9cfe74e69af63cff76b9aa81aaad7"
+    },
+    "src/java/src/test/resources/fixtures/code_39-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "6aa2273196eff20887a415210b89e3fe7b3321a254a89a14b460f1397d8d412e"
+    },
+    "src/java/src/test/resources/fixtures/code_39-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "3e42810e02acd67a68f16ffd168e1562713e15babc8916f67ed053a94ed36caa"
+    },
+    "src/java/src/test/resources/fixtures/code_39-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "7f8555416be95e15ab23d5fbff88d54931825cd3b86dcd8f812b8d020263091a"
+    },
+    "src/java/src/test/resources/fixtures/code_93-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "f8987acc5d68cacc0bcd2c94b123b118b1a2048b001e0a66fdcdf6c556139a72"
+    },
+    "src/java/src/test/resources/fixtures/code_93-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "dd205253f02ba9c4a47414f17555fe848c9062202183e59aae9717006142bad8"
+    },
+    "src/java/src/test/resources/fixtures/code_93-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "33fea52768143d8ea55b6ec04112d7d750f956356b594ea16c666d2918896b64"
+    },
+    "src/java/src/test/resources/fixtures/data_matrix-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "7d7d1d6c0658c015b4c5cb9981ff5e5d6d59fe1b270fe0b9c681be9a386be430"
+    },
+    "src/java/src/test/resources/fixtures/data_matrix-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "9556f3d68fa9a804b9bf5b48d2657664815e1a7ce958d10861783eed086fa91a"
+    },
+    "src/java/src/test/resources/fixtures/data_matrix-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "477d6422d9a62041433a8567dd14d5d5e5285265a21f11cba5fb23df52a106bc"
+    },
+    "src/java/src/test/resources/fixtures/ean_13-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "060c3b0d4cfcf53059fdcd2b3e5691e3fa6f2d0b8d9121e3a469bb78be7739e9"
+    },
+    "src/java/src/test/resources/fixtures/ean_13-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "c80ac91251e1e68ef9d95d7225b4cc3ecb4923149ddada101f86e002c4f4b340"
+    },
+    "src/java/src/test/resources/fixtures/ean_13-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "b9db37970519613c1bc5fef4189009c2278cda2850449eb7c6a6aa6d178a4e17"
+    },
+    "src/java/src/test/resources/fixtures/ean_8-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "9986cda7e34108eda429773da75a2a1c2db71fd80e81ffd2a8c491fb5a74983e"
+    },
+    "src/java/src/test/resources/fixtures/ean_8-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "6fbbc220fb3a3f7c42c8e0cac54ad5a93d5d21d70aa9a88c67aedb2cf90b121b"
+    },
+    "src/java/src/test/resources/fixtures/ean_8-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "9cc3f301db40f2b05a2a1769f5ba0cdc30a4beba046d4313ca04564764f907ca"
+    },
+    "src/java/src/test/resources/fixtures/edge-byte-only.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/edge-provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/edge-provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "225af7b9f82df9712109c630c46b96e7fe0193a6d65cd602cb934926d0d366be"
+    },
+    "src/java/src/test/resources/fixtures/edge-long-payload.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/edge-provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/edge-provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "2ffb06076b81a77a3cae34e1d5da97f2d53e1ddcc916756794c3c1ed107bccf7"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-ean-13-4-00003.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "d1a5ae77cdfb223da568b305f133390333b857a265ff8d7af03d3a64a6251f68"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-ean-13-4-05.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "ad7e61d063be1ec9b076a4c6ccdac75211fbd19a76bd683c04dba25c07bb16db"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-ean-8-9-00003.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "a5ff4ae42cab75ebb9f417523ccefd0c80aa01ad76f574b42236c50de39813c2"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-ean-8-9-05.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "d152c289f0db3d03ff3ab1cac0127b6fe15794129a43de1f2565cd73f74b5bf5"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-upc-a-0-00003.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "ad53dcad67ae45b5411875875caa22831fd920d67a0d9c385e7901f3b85f5ec8"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-upc-a-0-05.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "81e7d961ae16a89ba0f8595a66c727bddba3dea975b83af529a763c95fd8c345"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-upc-e-0-00003.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "7a5b6c3f6ca24f4d4937be94c0ebcfcb40da040518ac8cbf86ae7802a85dd09e"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-upc-e-0-05.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "7461db831f5bc1a2233d3d5e56951dbc47f3b1669370eec637df79ee5aa49580"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-upc-e-1-00003.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "893926f0d98765495f12378f048e7987b585d75f7563369d034782ea39020f29"
+    },
+    "src/java/src/test/resources/fixtures/ean-upc-upc-e-1-05.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/retail-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent Barry named retail fixture rendered with authenticated Zint 2.15.0 before reader implementation.",
+      "sha256": "78dd7660b17484eb65651ddede7e572950f9b5462c79bc5234b6b937d4fb4092"
+    },
+    "src/java/src/test/resources/fixtures/retail-provenance.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Source manifest, grayscale and independent expected-data identities for the generated Java retail attachment fixtures.",
+      "sha256": "439fc04a7701768090e8e5a64946c20ab89e87d4b104fa8c547c84c859412c73"
+    },
+    "src/java/src/test/resources/fixtures/itf-iata-00123.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/itf-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent named IATA 2 of 5 fixture written by pinned Zint 2.15.0.",
+      "sha256": "fa0551a14263d053ae52345214a8b8ec1d17baa6efb7eeeab85f75fcea33f912"
+    },
+    "src/java/src/test/resources/fixtures/itf-standard-bad-check14.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/itf-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent named Standard ITF fixture written by pinned Zint 2.15.0.",
+      "sha256": "855a160653d27db1875516dbba6efe38c2cc17d64e8f9f079153dbe328131215"
+    },
+    "src/java/src/test/resources/fixtures/itf-valid-itf14.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "src/java/src/test/resources/fixtures/itf-provenance.json", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Independent named ITF-14 fixture written by pinned Zint 2.15.0.",
+      "sha256": "2be1ef31e12ea2ab1f019275b11e83edc8b8812ca517ddf44b43cf648d658d3a"
+    },
+    "src/java/src/test/resources/fixtures/itf-provenance.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": ["LICENSE", "tests/barry_testdata/NOTICE-SyntheticTestdata"],
+      "provenance": "Source manifest, grayscale and independent expected-data identities for the three named Java ITF controls.",
+      "sha256": "048ef86987359f51f883e6deee92946043cfd713c92704fc1e54c777bdb6cab2"
+    },
+    "src/java/src/test/resources/fixtures/edge-nul-text.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/edge-provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/edge-provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "3e56cb1c7ea207e348c5e0120aff6f1c1c7681606e91adfc1fcbe49ca8bd5d86"
+    },
+    "src/java/src/test/resources/fixtures/edge-provenance.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/edge-provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/edge-provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "314706d225c94db493c8b744b78b5484d7d0782d7bfad3fae78c74dad7182078"
+    },
+    "src/java/src/test/resources/fixtures/edge-qr-unicode.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/edge-provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/edge-provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "6c5993d76112a7c7dced4c8b1fb7fbe052ce8fed163beb6e249c360ed87487ce"
+    },
+    "src/java/src/test/resources/fixtures/edges.properties": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/edge-provenance.json"
+      ],
+      "provenance": "Approved immutable generated Java fixture dimensions, expected payload/geometry and hashes; preserved byte-for-byte with corresponding independent writer provenance.",
+      "sha256": "21cb49af35107de9ddbf0c409d1ade6bcee9824ad79099df380f6977bdd74827"
+    },
+    "src/java/src/test/resources/fixtures/itf-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "84e15b734ebd04afb4c8e2847ec7bb5753115288e8379f2bd0328bff7508c095"
+    },
+    "src/java/src/test/resources/fixtures/itf-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "93a42a2587b451f4209b5429d36be795a3a29538c72227b35403718f5da562aa"
+    },
+    "src/java/src/test/resources/fixtures/itf-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "224c38ab548a6543b807ff7fe2c42ab306ee90e8f00dcf0eecefa307fbe075ec"
+    },
+    "src/java/src/test/resources/fixtures/itf_14-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "22e4f0c72acea06542304c0a6529e863da8ac74f74f7a85b9368e903c57ec554"
+    },
+    "src/java/src/test/resources/fixtures/itf_14-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "bfaaa2827de9e72cb0cffe6d01cbecdf89f9e8ce0bf755fb2a038fceae626e23"
+    },
+    "src/java/src/test/resources/fixtures/itf_14-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "ea0b15defabd57fd24776713c07391a76153252c221e17ab4f868ebabef835a3"
+    },
+    "src/java/src/test/resources/fixtures/provenance.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "2cab82dff826f2ad8dab783a1e270de5c4b2e9aa9c47088f651b7369b3172426"
+    },
+    "src/java/src/test/resources/fixtures/qr_code-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "ac9543f4ed906c5bf4672ae8146137f14de96c6d7803d64a6abedb4ae1ea731c"
+    },
+    "src/java/src/test/resources/fixtures/qr_code-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "830fe58c9227c3aa44cdeeb31e1e60e1cd06ad85e04a096ecf6c764844fe23f2"
+    },
+    "src/java/src/test/resources/fixtures/qr_code-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "92b8dc0f146be96dffbeee42493da337587e9a33466c122af3eff1a04a39fbfb"
+    },
+    "src/java/src/test/resources/fixtures/samples.properties": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "src/java/src/test/resources/fixtures/retail-provenance.json",
+        "src/java/src/test/resources/fixtures/itf-provenance.json"
+      ],
+      "provenance": "Java fixture dimensions, expected payload/geometry and hashes, with preexisting controls and the independently frozen retail and ITF extensions.",
+      "sha256": "69cfd16ba70eb3a966e62bb709154ef36370e864171ded660d947070bf6a7894"
+    },
+    "src/java/src/test/resources/fixtures/upc_a-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "e0fae6d21f862b5f8e45550e3e62465ebf58d4b8d04806e62fd2c040efae80ac"
+    },
+    "src/java/src/test/resources/fixtures/upc_a-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "4f3a8971b1c8e53700c046ca4b7ff4e13ad0f669c26176fafd2c7f30d6933f4c"
+    },
+    "src/java/src/test/resources/fixtures/upc_a-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "32b184309f75ba42717ad15f2bb46d0e62ab17c62aca421bbef8d97a5bb340fe"
+    },
+    "src/java/src/test/resources/fixtures/upc_e-000000.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "f5da50714140e2be0980254925d0baa3cd20bd0f4ded3431c5727ba6269b1803"
+    },
+    "src/java/src/test/resources/fixtures/upc_e-000001.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "36423d1a16d2e9320eb6eff94807df3ca28b2b14c6dc5c7d2867da9a2eeb5919"
+    },
+    "src/java/src/test/resources/fixtures/upc_e-000010.gray.gz": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "src/java/src/test/resources/fixtures/provenance.json",
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Approved immutable Barry generated Java grayscale control/provenance resource; original independent writer/source identities retained in native/java/src/test/resources/fixtures/provenance.json. Historical build/testdata references are provenance, not a public runtime dependency.",
+      "sha256": "94668feee369f994126fabb5f2ffb34a8a68a1a594836b72993a1f2cb631ddc9"
+    },
+    "src/python/src/barry/LICENSE-Code128": {
+      "license": "Apache-2.0",
+      "kind": "upstream-license",
+      "notice": [
+        "src/python/src/barry/LICENSE-Code128"
+      ],
+      "provenance": "Unmodified Apache License Version 2.0 text retained for ZXing-derived symbol-pattern constants; see native/rust/NOTICE-Code128 and NOTICE-LinearFormats.",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "src/python/src/barry/NOTICE-Code128": {
+      "license": "MIT AND Apache-2.0",
+      "kind": "attribution",
+      "notice": [
+        "src/python/src/barry/NOTICE-Code128",
+        "src/python/src/barry/LICENSE-Code128"
+      ],
+      "provenance": "Barry attribution for constants transcribed from ZXing 3.5.3; preserves cited ZXing authors/copyright and Apache-2.0 grant."
+    },
+    "src/python/src/barry/NOTICE-LinearFormats": {
+      "license": "MIT AND Apache-2.0",
+      "kind": "attribution",
+      "notice": [
+        "src/python/src/barry/NOTICE-LinearFormats",
+        "src/python/src/barry/LICENSE-Code128"
+      ],
+      "provenance": "Barry attribution for constants transcribed from ZXing 3.5.3; preserves cited ZXing authors/copyright and Apache-2.0 grant."
+    },
+    "src/python/src/barry/py.typed": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": ["LICENSE"],
+      "provenance": "Barry inline typing marker for installed PEP 561 clients."
+    },
+    "src/rust/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": ["LICENSE"],
+      "provenance": "Barry-authored Cargo crate acquisition, feature, licensing and application quickstart."
+    },
+    "src/rust/EXECUTION-RESOURCES.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "src/rust/JNI.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored maintained public source/build/integration documentation; external references retain their own terms."
+    },
+    "src/rust/LICENSE-Code128": {
+      "license": "Apache-2.0",
+      "kind": "upstream-license",
+      "notice": [
+        "src/rust/LICENSE-Code128"
+      ],
+      "provenance": "Unmodified Apache License Version 2.0 text retained for ZXing-derived symbol-pattern constants; see native/rust/NOTICE-Code128 and NOTICE-LinearFormats.",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "src/rust/NOTICE-Code128": {
+      "license": "MIT AND Apache-2.0",
+      "kind": "attribution",
+      "notice": [
+        "src/rust/NOTICE-Code128",
+        "src/rust/LICENSE-Code128"
+      ],
+      "provenance": "Barry attribution for constants transcribed from ZXing 3.5.3; preserves cited ZXing authors/copyright and Apache-2.0 grant."
+    },
+    "src/rust/NOTICE-DotCode": {
+      "license": "BSD-3-Clause",
+      "kind": "attribution",
+      "notice": [
+        "src/rust/NOTICE-DotCode"
+      ],
+      "provenance": "Retained Zint 2.15.0 backend/dotcode.c symbol map and backend/tests/test_dotcode.c named grids from commit 4896136bdbebb1a0908a5cc419513efa5bf4bf70; full Robin Stuart copyrights and BSD grant included."
+    },
+    "src/rust/NOTICE-LinearFormats": {
+      "license": "MIT AND Apache-2.0",
+      "kind": "attribution",
+      "notice": [
+        "src/rust/NOTICE-LinearFormats",
+        "src/rust/LICENSE-Code128"
+      ],
+      "provenance": "Barry attribution for constants transcribed from ZXing 3.5.3; preserves cited ZXing authors/copyright and Apache-2.0 grant."
+    },
+    "src/rust/NOTICE-MaxiCode": {
+      "license": "BSD-3-Clause",
+      "kind": "attribution",
+      "notice": [
+        "src/rust/NOTICE-MaxiCode"
+      ],
+      "provenance": "Retained Zint 2.15.0 backend/maxicode.h immutable ISO/IEC 16023 Figure 5 module placement and Annex A character assignments, commit 4896136bdbebb1a0908a5cc419513efa5bf4bf70; full Robin Stuart copyright and grant included."
+    },
+    "src/rust/NOTICE-PDF417": {
+      "license": "BSD-3-Clause",
+      "kind": "attribution",
+      "notice": [
+        "src/rust/NOTICE-PDF417"
+      ],
+      "provenance": "Retained Zint 2.15.0 PDF417, GS1 DataBar and Composite immutable symbol/layout/RAP facts, commit4896136bdbebb1a0908a5cc419513efa5bf4bf70; full Robin Stuart/Grandzebu copyrights and grant included."
+    },
+    "src/rust/src/assets/CNN_PARAMETERS.rs": {
+      "license": "MIT",
+      "kind": "model",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry selected embedded CNN parameters; MIT release expressly authorized along with selected checkpoints; immutable primitive-array representation preserved.",
+      "sha256": "2ec07350cb6f532f2013a2fea7a3808674723b9a5d60ff715fd91ce70a10908e"
+    },
+    "src/rust/src/assets/DM_GB_RANGES.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md",
+        "THIRD-PARTY-NOTICES.md"
+      ],
+      "provenance": "Barry packed representation of Python standard-codec mapping facts. Historical src/barry_datamatrix_tables.py at commit f036febde507824c9759283d1e098f0a86f27e0c, SHA256 ba354d67bc8c0f4aea2b2789bcbc59ed1b077472bbdeea24ff016df2a2cdc372, lines114-117 records offline codec generation; all621 integer words match that source exactly. MIT covers Barry's representation, not Python implementations or standards publications.",
+      "sha256": "4cfa3865c78d26e82b1918b1cce7ade3850842f56e9d6b7fdd0481fb937b5518"
+    },
+    "src/rust/src/assets/DM_GF_EXP.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry-maintained immutable ECC200 layout/finite-field facts accessed by native/rust/src/datamatrix/tables.rs; primitive-array representation retained unchanged.",
+      "sha256": "8f42904884c1407b833a371231cf95a5359967c716f3deea24f1e47b07d5b8b1"
+    },
+    "src/rust/src/assets/DM_GF_LOG.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry-maintained immutable ECC200 layout/finite-field facts accessed by native/rust/src/datamatrix/tables.rs; primitive-array representation retained unchanged.",
+      "sha256": "ba12135684586abfa36859df6dda5134dab561843366e15107aa84acc1390490"
+    },
+    "src/rust/src/assets/DM_LAYOUT.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry-maintained immutable ECC200 layout/finite-field facts accessed by native/rust/src/datamatrix/tables.rs; primitive-array representation retained unchanged.",
+      "sha256": "55fdd90674362586624e061107e61ed415324530622ac412a8e059eff1ff0b8d"
+    },
+    "src/rust/src/assets/DM_PAIR_PACKED.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md",
+        "THIRD-PARTY-NOTICES.md"
+      ],
+      "provenance": "Barry three21-bit-scalar packing of Python standard-codec ECI facts. Historical src/barry_datamatrix_tables.py at commit f036febde507824c9759283d1e098f0a86f27e0c, SHA256 ba354d67bc8c0f4aea2b2789bcbc59ed1b077472bbdeea24ff016df2a2cdc372, lines114-117 records offline codec generation; all32088 integer words match that source exactly. MIT covers Barry's representation, not Python implementations or standards publications.",
+      "sha256": "875be142faab2c51fac55d7ac393655de2b32bcf99d23e4d7d2c491ff258e12d"
+    },
+    "src/rust/src/assets/DM_SINGLE_PACKED.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md",
+        "THIRD-PARTY-NOTICES.md"
+      ],
+      "provenance": "Barry three21-bit-scalar packing of Python standard-codec ECI facts. Historical src/barry_datamatrix_tables.py at commit f036febde507824c9759283d1e098f0a86f27e0c, SHA256 ba354d67bc8c0f4aea2b2789bcbc59ed1b077472bbdeea24ff016df2a2cdc372, lines114-117 records offline codec generation; all1707 integer words match that source exactly. MIT covers Barry's representation, not Python implementations or standards publications.",
+      "sha256": "7aaaa002ad5e08cb5b2d4fe62d37457a72809e495fa77f09b78a0d8b32afe04a"
+    },
+    "src/rust/src/assets/GRAY_DIGITS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "4f3cdf670ee8dfd79d6cb2cddeb98333ae3f70f910d7eec35473502485d7985e"
+    },
+    "src/rust/src/assets/GRAY_DIGIT_AXIS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "d046157e1c7e69bc8f3ed464364a7a84e4ccb609b60c8f542d582ac64e38ba1f"
+    },
+    "src/rust/src/assets/GRAY_DIGIT_NORM.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "2d1c6ca0aa65f8db93e2e584987af7cbdeec214390c5020409b9bb464ca4b78e"
+    },
+    "src/rust/src/assets/GRAY_DIGIT_X.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "41ba2fa76804496075dcea8b5ea69948d9c99348d019cfcbee48c117076f6889"
+    },
+    "src/rust/src/assets/GRAY_GUARD_0_AXIS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "9cfa8b9f2392403c031e9dcbf0cae6b99fd0bb41eac23b6ec15c3b7c8465ecf0"
+    },
+    "src/rust/src/assets/GRAY_GUARD_0_NORM.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "099c6a7f300ea53b70c9fb4fa03a754ad728c01c42c22e06934f023c27d7a1ea"
+    },
+    "src/rust/src/assets/GRAY_GUARD_0_TABLE.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "8e10fb968d280a3b3541ac455040365eedd823e39ce28395c5ec9d5b9a0653d3"
+    },
+    "src/rust/src/assets/GRAY_GUARD_0_X.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "0eb21d9334da405a3f7592f51cc546a5b6e28a090dd379f89c38f41d2bf04606"
+    },
+    "src/rust/src/assets/GRAY_GUARD_1_AXIS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "2d970c62a64df759f8156c4190ce03f9fcd105952a67a17dea635382e8e90564"
+    },
+    "src/rust/src/assets/GRAY_GUARD_1_NORM.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "405ebe6306e766246ad5c59b60da570bab5f4cdd8bdb29c55df4ea310611dc56"
+    },
+    "src/rust/src/assets/GRAY_GUARD_1_TABLE.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "bf4d18fa3cd867119a5917edab2c6f6fd9458639836819d14cfcb44a97214d0b"
+    },
+    "src/rust/src/assets/GRAY_GUARD_1_X.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "c4527cd022f32617feccc8aee49f5f4f8118570878c0da96f1edb89843fbbd7f"
+    },
+    "src/rust/src/assets/GRAY_GUARD_2_AXIS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "9cfa8b9f2392403c031e9dcbf0cae6b99fd0bb41eac23b6ec15c3b7c8465ecf0"
+    },
+    "src/rust/src/assets/GRAY_GUARD_2_NORM.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "9a0bda316429959080925526768ec7cf87d3c4521021ea33cb05dc081942bc20"
+    },
+    "src/rust/src/assets/GRAY_GUARD_2_TABLE.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "47e60843f8e5f006bef32f98fb20275ca9f87851801de99ddae50b3f101c8fa0"
+    },
+    "src/rust/src/assets/GRAY_GUARD_2_X.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "79a3b4e9c4a4c7f8d36255b259f0170dea5bcf6c9883f981bbd88ecd1a17fb17"
+    },
+    "src/rust/src/assets/GRAY_MODELS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "038028eceb5cdf0179651b34d11b3ee7a49cfb2c91b55a871b0b377da5508db5"
+    },
+    "src/rust/src/assets/GRAY_PARITY.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "bb9f990d90e8f79495a76340ca017696fd45a6ff11bfb04f71ff1e4b6fb7d06a"
+    },
+    "src/rust/src/assets/GRAY_PHASES.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "ca9e525e2d94f84512bbd5e3e11a639d9299d031feb4722ac90b601f24a95f3b"
+    },
+    "src/rust/src/assets/GRAY_PHASE_PENALTY.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "3d6a52a9e956deba09a723929a8b891607eb7e6f3a4c398f6d4aacb948244abf"
+    },
+    "src/rust/src/assets/GRAY_POSITIONS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "2b3ec849ff7a6fd5c20754da8fc12e614e539f0420ac072690ca62381d0c721d"
+    },
+    "src/rust/src/assets/GRAY_UNIT_DIGITS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "bb1ce5b1dd700d791b35c21961c83c6be252636aaddc47b555b44b9e07a2a30d"
+    },
+    "src/rust/src/assets/GRAY_WARPS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "65990fdc0a85c158551b66fa961981c03a4b2f33106eb1306d71822cd05f7cbe"
+    },
+    "src/rust/src/assets/GRAY_WARP_PENALTY.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "214ef836d77b29799cd14f081c1185519ea31d78985210a468ab3b4ea809569c"
+    },
+    "src/rust/src/assets/GRAY_WIDTH_FACTORS.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md"
+      ],
+      "provenance": "Barry immutable grayscale numerical/template parameter fragment; public developer/decoding_tables.py documents mathematical construction. MIT release expressly authorized; bytes preserved.",
+      "sha256": "6166ef789209095e2eb794ba17001eabcf8ff9aa86ceb632ae5559305de5eedb"
+    },
+    "src/rust/src/assets/QR_GB2312_PACKED.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md",
+        "THIRD-PARTY-NOTICES.md"
+      ],
+      "provenance": "Barry three21-bit-scalar packing of standard Python gb2312 mapping facts, documented in historical src/barry_qr_tables.py lines1-14 (SHA256 dfadb9eb02cdead55ae603d8f6a35472978daa30fb3f897d895742934c609449). All2726 words match the original definition and independently regenerated Python codec output. MIT covers Barry's representation, not Python implementations or standards publications.",
+      "sha256": "fe399679a0fb89e366930ef4d08f5a2c3d659c9d0ff03a78c3a4ca11ab376a64"
+    },
+    "src/rust/src/assets/QR_SJIS_PACKED.rs": {
+      "license": "MIT",
+      "kind": "generated-data",
+      "notice": [
+        "LICENSE",
+        "docs/licensing.md",
+        "THIRD-PARTY-NOTICES.md"
+      ],
+      "provenance": "Barry three21-bit-scalar packing of standard Python shift_jis mapping facts, documented in historical src/barry_qr_tables.py lines1-14 (SHA256 dfadb9eb02cdead55ae603d8f6a35472978daa30fb3f897d895742934c609449). All2961 words match the original definition and independently regenerated Python codec output. MIT covers Barry's representation, not Python implementations or standards publications.",
+      "sha256": "308c48ec46d45388eb6258d154da39d76847b195bd7f2b2e485066d545f89c8e"
+    },
+    "src/flutter/CHANGELOG.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": ["LICENSE"],
+      "provenance": "Barry-maintained Dart package release notes."
+    },
+    "src/flutter/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": ["LICENSE"],
+      "provenance": "Barry-maintained Flutter package and application deployment guide."
+    },
+    "src/wasm/package.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    },
+    "tests/barry_testdata/LICENSE-Segno": {
+      "license": "BSD-3-Clause",
+      "kind": "upstream-license",
+      "notice": [
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Retained Segno license: Copyright (c) 2016-2025 Lars Heuer; developer-only QR encoder attribution.",
+      "sha256": "de6c85fccf5d52902aa13dfe2dc6d2a2a106fc3419ed438f3460f0d4b76a6935"
+    },
+    "tests/barry_testdata/NOTICE-SyntheticTestdata": {
+      "license": "MIT AND Apache-2.0 AND BSD-3-Clause",
+      "kind": "attribution",
+      "notice": [
+        "tests/barry_testdata/NOTICE-SyntheticTestdata",
+        "src/python/src/barry/LICENSE-Code128",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Barry synthetic-encoder attribution for developer-only Zint generation, historical ZXing-derived fixtures and retained static Segno vectors; individual grants remain separate."
+    },
+    "tests/barry_testdata/default-profile.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    },
+    "tests/fixtures/python-desktop/normalization-golden.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Retained Barry generated desktop-normalization oracle results; tests construct synthetic codec/orientation inputs independently. No photographic corpus pixels.",
+      "sha256": "b600a860a215438b8fc81022f36d528fe95f13878af06512a94e3c5933046756"
+    },
+    "tests/fixtures/python-desktop/xmp-avif.avif": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "tests/fixtures/python-desktop/normalization-golden.json"
+      ],
+      "provenance": "Synthetic RGBA/XMP orientation control; construction of the xmp-avif/xmp-exif1-avif controls is retained in tests/test_python_desktop_normalization_generated.py. Not camera imagery.",
+      "sha256": "037c9dc2d691b6bd7c151af91a70601de6b7f8d95c1c8675933bb89a0b5d5a15"
+    },
+    "tests/fixtures/python-desktop/xmp-exif1-avif.avif": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "tests/fixtures/python-desktop/normalization-golden.json"
+      ],
+      "provenance": "Synthetic RGBA/XMP orientation control; construction of the xmp-avif/xmp-exif1-avif controls is retained in tests/test_python_desktop_normalization_generated.py. Not camera imagery.",
+      "sha256": "037c9dc2d691b6bd7c151af91a70601de6b7f8d95c1c8675933bb89a0b5d5a15"
+    },
+    "tests/fixtures/qr_scalar_tail_interoperability_vectors.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Independent QR matrices and expected encoder input retained with inline Segno1.6.6/qrcode provenance; no decoder used to obtain expected values. Historical evidence references are not required inputs.",
+      "sha256": "9c001526500428c00ec6a8fa7b4bf1df79fc4bf8f93046ed1c306071d300698f"
+    },
+    "tests/fixtures/qr_scalar_vectors.json": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE",
+        "tests/barry_testdata/LICENSE-Segno"
+      ],
+      "provenance": "Independent QR matrices and expected encoder input retained with inline Segno1.6.6/qrcode provenance; no decoder used to obtain expected values. Historical evidence references are not required inputs.",
+      "sha256": "c3af7330c7a57e647bf34609e20b52940a6d7d825bb9459ee83b2022a6bbad06"
+    },
+    "tests/fixtures/rust_digit_phases_input.rs": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Approved immutable parse-only typed Rust adapter input used by public numerical-source regressions; generated source fixture, not a second maintained recognition implementation.",
+      "sha256": "b5e8833f30f6ba4aa8b5056c30cfcdcf6ebeca6dddd3a3a68a0e27ac67ea305e"
+    },
+    "tests/fixtures/rust_guard_models_input.rs": {
+      "license": "MIT",
+      "kind": "generated-fixture",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Approved immutable parse-only typed Rust adapter input used by public numerical-source regressions; generated source fixture, not a second maintained recognition implementation.",
+      "sha256": "65f3d7443c5f9405a348f2e498d9afcbbdf2884d5389aa435a701952c23291e2"
+    },
+    "tests/suite-inventory.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    },
+    "tools/browser/package-lock.json": {
+      "license": "MIT",
+      "kind": "lockfile",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained dependency resolution/integrity metadata; upstream package licenses remain independent and are not replaced by this metadata license."
+    },
+    "tools/browser/package.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    },
+    "tools/browser_runtime_pins.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    },
+    "tools/consumers/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored protocol/regression consumer build and ownership documentation; these tooling harnesses are not teaching examples."
+    },
+    "tools/consumers/android/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored Android AAR/JNI/Prefab protocol smoke consumer instructions; retained tooling rather than an image-picker example."
+    },
+    "tools/consumers/android/app/consumer-rules.pro": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry Android tooling JNI/R8 callback-retention configuration; no third-party runtime implementation."
+    },
+    "tools/consumers/android/app/src/main/cpp/CMakeLists.txt": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry Android consumer CMake Prefab linkage configuration; consumes the public C ABI rather than bundling another decoder."
+    },
+    "tools/consumers/flutter/bindings/generator.lock": {
+      "license": "MIT",
+      "kind": "lockfile",
+      "notice": ["LICENSE"],
+      "provenance": "Pinned ffigen dependency resolution metadata used to regenerate Barry's ABI14 Dart bindings."
+    },
+    "tools/consumers/ios/README.md": {
+      "license": "MIT",
+      "kind": "documentation",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-authored three-slice Swift/C ABI smoke consumer build/run instructions; retained tooling rather than a UIKit teaching example."
+    },
+    "tools/desktop-notice-pins.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained upstream source acquisition identities; referenced sources and dependencies retain their individual licenses."
+    },
+    "tools/native-provision.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    },
+    "tools/native-targets.json": {
+      "license": "MIT",
+      "kind": "metadata",
+      "notice": [
+        "LICENSE"
+      ],
+      "provenance": "Barry-maintained public project metadata; dependency references do not relicense external packages."
+    }
+  }
+}

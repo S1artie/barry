@@ -1,0 +1,53 @@
+{
+  "name": "@barry/barcode",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "description": "Rust barcode scanning for browsers, with explicit serial and threaded WebAssembly deployments",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "barry": {
+    "requiredWasmFeatures": [
+      "simd128"
+    ],
+    "optionsContractVersion": 6,
+    "workerProtocolVersion": 12,
+    "supportedSymbologies": 519792,
+    "executionProfile": "shared-pool-v2"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs"
+    },
+    "./worker-entry.mjs": "./worker-entry.mjs",
+    "./rayon-helper.mjs": "./rayon-helper.mjs",
+    "./serial/barry_wasm.js": "./serial/barry_wasm.js",
+    "./serial/barry_wasm_bg.wasm": "./serial/barry_wasm_bg.wasm",
+    "./threads/barry_wasm.js": "./threads/barry_wasm.js",
+    "./threads/barry_wasm_bg.wasm": "./threads/barry_wasm_bg.wasm",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "frame-input.mjs",
+    "barry-error.mjs",
+    "symbology-selection.mjs",
+    "databar-result.mjs",
+    "dotcode-result.mjs",
+    "worker-client.mjs",
+    "worker-entry.mjs",
+    "thread-pool.mjs",
+    "rayon-helper.mjs",
+    "serial/",
+    "threads/",
+    "notices/",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "LICENSE-ASSETS.json",
+    "NOTICE-MANIFEST.json"
+  ],
+  "sideEffects": true
+}

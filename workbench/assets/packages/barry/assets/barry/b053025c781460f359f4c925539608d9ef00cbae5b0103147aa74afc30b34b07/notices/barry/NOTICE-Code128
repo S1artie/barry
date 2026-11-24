@@ -1,0 +1,10 @@
+Barry Code128 width-pattern table attribution
+
+The Code128 symbol-width table in src/linear/code128.rs is derived from ZXing's
+Code128Reader.CODE_PATTERNS, Copyright 2008 ZXing authors, licensed under the
+Apache License, Version 2.0. Barry packs the six-width symbol prefixes as integer
+constants and handles the stop symbol's seventh width separately. The decoding
+implementation is Barry code; no ZXing decoder is used at runtime.
+
+Source: https://github.com/zxing/zxing/blob/zxing-3.5.3/core/src/main/java/com/google/zxing/oned/Code128Reader.java
+License: LICENSE-Code128 (Apache License, Version 2.0).
