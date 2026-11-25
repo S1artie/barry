@@ -1,0 +1,97 @@
+Barry landing page icon credits
+===============================
+
+The icons identify supported technologies and do not imply endorsement.
+Trademarks belong to their respective owners.
+
+webassembly.svg — WebAssembly logo from Devicon 2.17.0
+https://github.com/devicons/devicon/blob/v2.17.0/icons/wasm/wasm-original.svg
+
+macos.svg — Apple logo; added a viewBox
+https://commons.wikimedia.org/wiki/File:Apple_logo_black.svg
+
+windows.svg — Microsoft Windows logo
+https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021.svg
+
+linux.svg — Tux, created with The GIMP by Larry Ewing (lewing@isc.tamu.edu)
+Vector artwork by Simon Budig and Garrett LeSage.
+https://commons.wikimedia.org/wiki/File:Tux.svg
+
+These drawings are copyrighted by Larry Ewing and Simon Budig
+(penguin-variant.sk also by Anja Gerwinski), redistribution is free but
+has to include this README/Copyright notice.
+https://www.home.unix-ag.org/simon/penguin/
+
+ios.svg — Apple iOS wordmark
+https://commons.wikimedia.org/wiki/File:IOS_wordmark_(2017).svg
+
+android.svg — Android robot by Google Inc., designed by Irina Blok
+The Android robot is reproduced from work created and shared by Google and
+used according to terms described in the Creative Commons 3.0 Attribution License.
+https://commons.wikimedia.org/wiki/File:Android_robot.svg
+https://creativecommons.org/licenses/by/3.0/
+
+rust.svg — Rust logo, Rust Foundation, CC BY 4.0; added a viewBox
+https://commons.wikimedia.org/wiki/File:Rust_programming_language_black_logo.svg
+https://creativecommons.org/licenses/by/4.0/
+
+c.svg — C language icon
+https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg
+
+python.svg — Python logo, Python Software Foundation; removed DTD reference
+https://commons.wikimedia.org/wiki/File:Python-logo-notext.svg
+
+flutter.svg — Flutter logo from Devicon 2.17.0
+https://github.com/devicons/devicon/blob/v2.17.0/icons/flutter/flutter-original.svg
+
+java.svg — Duke, the Java mascot by Sun Microsystems; cropped empty margins
+and removed DTD reference.
+https://github.com/openjdk/duke/blob/master/vector/Wave.svg
+https://wiki.openjdk.org/display/duke/Main
+
+Copyright © Sun Microsystems Inc.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+* Neither the name of Sun Microsystems Inc. nor the names of its contributors
+  may be used to endorse or promote products derived from this software
+  without specific prior written permission.
+
+This software is provided by Sun Microsystems Inc. "as is" and any express
+or implied warranties, including, but not limited to, the implied warranties
+of merchantability and fitness for a particular purpose are disclaimed. In no
+event shall Sun Microsystems Inc. be liable for any direct, indirect,
+incidental, special, exemplary, or consequential damages (including, but not
+limited to, procurement of substitute goods or services; loss of use, data,
+or profits; or business interruption) however caused and on any theory of
+liability, whether in contract, strict liability, or tort (including
+negligence or otherwise) arising in any way out of the use of this software,
+even if advised of the possibility of such damage.
+
+Devicon — MIT License
+---------------------
+
+Copyright (c) 2015 konpa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -215,63 +215,83 @@
       color: var(--muted);
     }
 
-    .native {
-      display: grid;
-      grid-template-columns: minmax(12rem, .8fr) minmax(0, 2fr);
-      align-items: center;
-      gap: 1.5rem;
-      padding-block: 1.6rem 2.25rem;
+    .platforms {
+      padding-block: 1.75rem 2.25rem;
       border-top: 1px solid var(--line);
     }
 
-    .native h2 {
+    .platforms h2 {
       margin: 0;
       font-size: 1.55rem;
       line-height: 1.2;
       letter-spacing: -.04em;
     }
 
-    .native p { margin: .3rem 0 0; color: var(--muted); font-size: .9rem; }
+    .platforms > p { margin: .35rem 0 1.15rem; color: var(--muted); }
 
-    .app-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: .85rem;
+    .platform-grid, .interface-list {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .app-card {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: .45rem .8rem;
-      padding: .85rem;
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: .75rem;
+    }
+
+    .platform-card {
+      display: grid;
+      justify-items: center;
+      align-content: start;
+      gap: .2rem;
+      padding: 1rem .5rem;
       border: 1px solid var(--line);
       border-radius: .65rem;
       background: #fefcf7;
+      text-align: center;
     }
 
-    .app-card svg {
-      flex: none;
-      width: 2.35rem;
-      height: 2.35rem;
-      padding: .58rem;
-      border-radius: .45rem;
-      background: #f0ede4;
+    .platform-card img {
+      width: 3.25rem;
+      height: 2.75rem;
+      margin-bottom: .45rem;
+      object-fit: contain;
     }
 
-    .app-card strong { flex: 1; }
-
-    .status {
-      padding: .28rem .48rem;
-      border-radius: .25rem;
-      background: #f0ede4;
+    .platform-note {
       color: var(--muted);
-      font: 650 .7rem/1.2 var(--mono);
-      white-space: nowrap;
+      font: 650 .72rem/1.3 var(--mono);
     }
+
+    .interfaces {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .65rem 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .interfaces h3 { margin: 0; font-size: .875rem; }
+
+    .interface-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+    }
+
+    .interface-list li {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .3rem .65rem;
+      border: 1px solid var(--line);
+      border-radius: .45rem;
+      font-size: .875rem;
+    }
+
+    .interface-list img { width: 1.25rem; height: 1.25rem; object-fit: contain; }
 
     .site-footer {
       padding-block: 1.1rem 1.5rem;
@@ -280,15 +300,19 @@
       font-size: .78rem;
     }
 
+    @media (max-width: 58rem) {
+      .platform-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
     @media (max-width: 49rem) {
       .hero { grid-template-columns: 1fr; }
       h1 { max-width: 9em; font-size: clamp(3.2rem, 10vw, 5.25rem); }
       .plate { width: 100%; max-width: 34rem; }
-      .native { grid-template-columns: 1fr; gap: 1rem; }
     }
 
     @media (max-width: 34rem) {
-      .app-list { grid-template-columns: 1fr; }
+      .platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .site-footer { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -333,32 +357,54 @@
       </figure>
     </section>
 
-    <section class="native" aria-labelledby="native-title">
-      <div>
-        <h2 id="native-title">Native apps</h2>
-        <p>Live scanning on your phone.</p>
-      </div>
-      <ul class="app-list">
-        <li class="app-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18.5h4"/>
-          </svg>
-          <strong>iOS</strong>
-          <span class="status">Coming soon</span>
+    <section class="platforms" aria-labelledby="platforms-title">
+      <h2 id="platforms-title">Supported platforms</h2>
+      <p>Run Barry in a browser or integrate it into a desktop or mobile app.</p>
+      <ul class="platform-grid" role="list">
+        <li class="platform-card">
+          <img src="./platform-icons/webassembly.svg" width="52" height="44" alt="">
+          <strong>Web</strong>
+          <span class="platform-note">WebAssembly</span>
         </li>
-        <li class="app-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 18h18a9 9 0 0 0-18 0Zm4-8L5 7m12 3 2-3M8 14h.01m8 0h.01"/>
-          </svg>
+        <li class="platform-card">
+          <img src="./platform-icons/macos.svg" width="52" height="44" alt="">
+          <strong>macOS</strong>
+        </li>
+        <li class="platform-card">
+          <img src="./platform-icons/windows.svg" width="52" height="44" alt="">
+          <strong>Windows</strong>
+        </li>
+        <li class="platform-card">
+          <img src="./platform-icons/linux.svg" width="52" height="44" alt="">
+          <strong>Linux</strong>
+        </li>
+        <li class="platform-card">
+          <img src="./platform-icons/ios.svg" width="52" height="44" alt="">
+          <strong>iOS</strong>
+          <span class="platform-note">App coming soon</span>
+        </li>
+        <li class="platform-card">
+          <img src="./platform-icons/android.svg" width="52" height="44" alt="">
           <strong>Android</strong>
-          <span class="status">Coming soon</span>
+          <span class="platform-note">App coming soon</span>
         </li>
       </ul>
+      <div class="interfaces">
+        <h3 id="interfaces-title">Developer interfaces</h3>
+        <ul class="interface-list" role="list" aria-labelledby="interfaces-title">
+          <li><img src="./platform-icons/rust.svg" width="20" height="20" alt="">Rust</li>
+          <li><img src="./platform-icons/c.svg" width="20" height="20" alt="">C</li>
+          <li><img src="./platform-icons/python.svg" width="20" height="20" alt="">Python</li>
+          <li><img src="./platform-icons/java.svg" width="20" height="20" alt="">Java</li>
+          <li><img src="./platform-icons/flutter.svg" width="20" height="20" alt="">Flutter</li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer shell">
     <span>Barry contributors</span>
+    <a href="./platform-icons/NOTICE.txt">Icon credits</a>
     <span>MIT-licensed code</span>
   </footer>
 </body>
