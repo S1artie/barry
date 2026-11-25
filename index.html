@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Try Barry, the open-source Rust barcode scanning library. Scan photos or live camera frames in the web workbench.">
+  <meta name="theme-color" content="#faf8f3">
+  <link rel="icon" href="./barry-logo.svg" type="image/svg+xml">
+  <title>Barry — Open-source barcode scanning</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #faf8f3;
+      --ink: #141c1d;
+      --muted: #535856;
+      --line: #ddd9ce;
+      --orange: #ff8000;
+      --rust: #a04108;
+      --mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.55 system-ui, sans-serif;
+    }
+
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--rust); outline-offset: 4px; }
+
+    .shell {
+      width: min(72rem, calc(100% - 2 * clamp(1.25rem, 5vw, 4rem)));
+      margin-inline: auto;
+    }
+
+    .site-header, .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .site-header {
+      padding-block: 1.2rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -.045em;
+    }
+
+    .wordmark svg {
+      width: 2.25rem;
+      height: 2.25rem;
+      padding: .48rem;
+      border-radius: .5rem;
+      background: var(--ink);
+      color: var(--orange);
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .5rem .8rem;
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+      font-size: .875rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .source-link:hover { background: #efebe1; border-color: #a39e92; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      padding-block: clamp(3rem, 6vw, 5.5rem);
+    }
+
+    .eyebrow, .plate figcaption {
+      margin: 0;
+      font: 700 .72rem/1.3 var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      color: var(--rust);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.4rem;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    h1 {
+      max-width: 7.6em;
+      margin: .2em 0 .23em;
+      font-size: clamp(3.3rem, 6.6vw, 6.35rem);
+      font-weight: 850;
+      line-height: .99;
+      letter-spacing: -.052em;
+      text-wrap: balance;
+    }
+
+    h1 span { color: var(--rust); }
+
+    .intro {
+      max-width: 36ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+    }
+
+    .hero-action {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .7rem 1.15rem;
+      margin-top: 1.8rem;
+    }
+
+    .launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .82rem 1.05rem;
+      border-radius: .55rem;
+      background: var(--orange);
+      color: var(--ink);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .launch:hover { background: #ff9b36; }
+    .launch svg { flex: none; }
+
+    .privacy {
+      margin: 0;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .plate {
+      display: grid;
+      margin: 0;
+      padding: .75rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: #f0ede4;
+    }
+
+    .plate-art {
+      position: relative;
+      display: grid;
+      place-items: center;
+      aspect-ratio: 1.34;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: .55rem;
+      background-color: #fefcf7;
+      background-image: radial-gradient(#d9d3c5 1px, transparent 1px);
+      background-position: center;
+      background-size: 1rem 1rem;
+    }
+
+    .plate-art::before {
+      position: absolute;
+      z-index: -1;
+      inset: 5.5%;
+      content: "";
+      background:
+        linear-gradient(var(--rust), var(--rust)) top left,
+        linear-gradient(var(--rust), var(--rust)) top left,
+        linear-gradient(var(--rust), var(--rust)) top right,
+        linear-gradient(var(--rust), var(--rust)) top right,
+        linear-gradient(var(--rust), var(--rust)) bottom left,
+        linear-gradient(var(--rust), var(--rust)) bottom left,
+        linear-gradient(var(--rust), var(--rust)) bottom right,
+        linear-gradient(var(--rust), var(--rust)) bottom right;
+      background-size: 1rem 1px, 1px 1rem;
+      background-repeat: no-repeat;
+    }
+
+    .plate img {
+      display: block;
+      width: 78%;
+      height: auto;
+      filter: drop-shadow(0 3px 0 #fefcf7) drop-shadow(0 -3px 0 #fefcf7);
+    }
+
+    .plate figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: .5rem;
+      padding: .75rem .15rem 0;
+      color: var(--muted);
+    }
+
+    .native {
+      display: grid;
+      grid-template-columns: minmax(12rem, .8fr) minmax(0, 2fr);
+      align-items: center;
+      gap: 1.5rem;
+      padding-block: 1.6rem 2.25rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .native h2 {
+      margin: 0;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      letter-spacing: -.04em;
+    }
+
+    .native p { margin: .3rem 0 0; color: var(--muted); font-size: .9rem; }
+
+    .app-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .85rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .app-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .45rem .8rem;
+      padding: .85rem;
+      border: 1px solid var(--line);
+      border-radius: .65rem;
+      background: #fefcf7;
+    }
+
+    .app-card svg {
+      flex: none;
+      width: 2.35rem;
+      height: 2.35rem;
+      padding: .58rem;
+      border-radius: .45rem;
+      background: #f0ede4;
+    }
+
+    .app-card strong { flex: 1; }
+
+    .status {
+      padding: .28rem .48rem;
+      border-radius: .25rem;
+      background: #f0ede4;
+      color: var(--muted);
+      font: 650 .7rem/1.2 var(--mono);
+      white-space: nowrap;
+    }
+
+    .site-footer {
+      padding-block: 1.1rem 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    @media (max-width: 49rem) {
+      .hero { grid-template-columns: 1fr; }
+      h1 { max-width: 9em; font-size: clamp(3.2rem, 10vw, 5.25rem); }
+      .plate { width: 100%; max-width: 34rem; }
+      .native { grid-template-columns: 1fr; gap: 1rem; }
+    }
+
+    @media (max-width: 34rem) {
+      .app-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header shell">
+    <span class="wordmark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+        <path d="M2 3v18m7-18v18m6-18v18m7-18v18" stroke-width="2"/>
+        <path d="M5.5 3v18m13-18v18"/>
+      </svg>
+      Barry
+    </span>
+    <a class="source-link" href="https://github.com/S1artie/barry">
+      View on GitHub
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 18 18 6M8 6h10v10"/>
+      </svg>
+    </a>
+  </header>
+
+  <main class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Open-source barcode scanning</p>
+        <h1 id="hero-title">Put Barry to the test<span>.</span></h1>
+        <p class="intro">Barry is a Rust library that finds and decodes barcodes. Try it on a photo or a live camera feed and inspect the results right in your browser.</p>
+        <div class="hero-action">
+          <a class="launch" href="./workbench/">
+            Open Web Workbench
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 12h15m-6-6 6 6-6 6"/>
+            </svg>
+          </a>
+          <p class="privacy">No install. No uploads.</p>
+        </div>
+      </div>
+      <figure class="plate">
+        <div class="plate-art">
+          <img src="./barry-logo.svg" width="1380" height="910" alt="Barry logo: a badger with barcode stripes and an orange underline">
+        </div>
+        <figcaption><span>Barry</span><span>Barcode library</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="native" aria-labelledby="native-title">
+      <div>
+        <h2 id="native-title">Native apps</h2>
+        <p>Live scanning on your phone.</p>
+      </div>
+      <ul class="app-list">
+        <li class="app-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18.5h4"/>
+          </svg>
+          <strong>iOS</strong>
+          <span class="status">Coming soon</span>
+        </li>
+        <li class="app-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 18h18a9 9 0 0 0-18 0Zm4-8L5 7m12 3 2-3M8 14h.01m8 0h.01"/>
+          </svg>
+          <strong>Android</strong>
+          <span class="status">Coming soon</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <span>Barry contributors</span>
+    <span>MIT-licensed code</span>
+  </footer>
+</body>
+</html>
